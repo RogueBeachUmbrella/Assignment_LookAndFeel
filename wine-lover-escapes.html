@@ -13,9 +13,9 @@
     <!--Container start-->
     <div class="container">
         <!--Header start-->
-        <div class="c1 flex-container">
+        <div class="c1 flex-column">
             <header>
-                <h1 class="center">Wine Escapes</h1>
+                <h1>Wine Escapes</h1>
                 <aside>
                     <p>Discover what the French Rivera has to offer</p>
                 </aside>
@@ -24,9 +24,9 @@
         <!--Header end-->
 
         <!--Main content start-->
-        <div>
+        <div class="c1 flex-column">
             <div>
-                <h2 class="center">
+                <h2>
                     Wineries & Vineyards
                 </h2>
                 <div>
@@ -38,6 +38,41 @@
                         the appellation which celebrated its 70th anniversary in 2011. On the culminating plots of the appellation, the vines of Château de Bellet surround the old family chapel. The monument built in homage to Agnès Roissard de Bellet
                         in 1873 is one of the major imprints left by this family. Today the desecrated Chapel opens its doors to you all year round to discover our shop and tasting room where you can taste gourmet wines of character.
                     </p>
+                    <div class="slideshow-container">
+                        <div class="image-slide">
+                            <div class="numbertext">1 / 4</div>
+                            <img src="./img/chateau-de-bellet/aerial-view.jpg">
+                            <div class="text">Caption Text</div>
+                        </div>
+                        <div class="image-slide">
+                            <div class="numbertext">2 / 4</div>
+                            <img src="./img/chateau-de-bellet/cask-logo.jpg">
+                            <div class="text">Caption Text</div>
+                        </div>
+                        <div class="image-slide">
+                            <div class="numbertext">3 / 4</div>
+                            <img src="./img/chateau-de-bellet/chess-game.jpg">
+                            <div class="text">Caption Text</div>
+                        </div>
+                        <div class="image-slide">
+                            <div class="numbertext">4 / 4</div>
+                            <img src="./img/chateau-de-bellet/red-wine.jpg">
+                            <div class="text">Caption Text</div>
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+
                     <a href="https://www.chateaudebellet.com/">Website</a>
                 </div>
                 <div>
@@ -66,16 +101,12 @@
             </div>
         </div>
         <!--Main content end-->
-        <!--Footer start-->
-        <div class="flex-container">
-            <a class="home-button" href="index.html">Home</a>
-        </div>
-        <!--Footer end-->
+        <a class="home-button" href="index.html">Home</a>
     </div>
     <!--Container end-->
 
     <!--JS link-->
-    <script src="./js/main.js"></script>
+    <script src="./js/wine-escapes.js"></script>
 </body>
 
 </html>
