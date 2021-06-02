@@ -54,6 +54,28 @@ html {
     }
 }
 
-.center {
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex-grow: 1;
+}
+
+h1,
+h2,
+aside {
     text-align: center;
+}
+
+.home-button {
+    width: 75%;
+    margin: 5%;
+    padding: 15px 25px;
+    height: 25px;
+    text-align: center;
+    text-decoration: none;
+    background-color: royalblue;
+    color: white;
 }
