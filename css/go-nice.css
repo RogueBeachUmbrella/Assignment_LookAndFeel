@@ -39,15 +39,49 @@
 
 body {
     margin: 0;
-    font-family: var(--bs-font-sans-serif);
+    font-family: var(--bs-font-sans-serif); 
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
+    /*
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+    */
+    background: linear-gradient(-45deg, 
+                                #88cae4, 
+                                #dfeceb, 
+                                #6895e9, 
+                                #757bd1);
+    background-size: 400% 400%;
+    -webkit-animation: gradientBG 10s ease infinite;
+            animation: gradientBG 10s ease infinite;
 }
+/*  Gradient */
+@-webkit-keyframes gradientBG {
+    0% {
+    background-position: 0% 50%;
+    }
+    50% {
+    background-position: 100% 50%;
+    }
+    100% {
+    background-position: 0% 50%;
+    }
+   }
+   @keyframes gradientBG {
+    0% {
+    background-position: 0% 50%;
+    }
+    50% {
+    background-position: 100% 50%;
+    }
+    100% {
+    background-position: 0% 50%;
+    }
+   }
+
 
 @media (prefers-reduced-motion: no-preference) {
      :root {
@@ -91,7 +125,7 @@ h2,
 .h2,
 h1,
 .h1 {
-    margin-top: 0;
+    margin-top: 1.0rem;
     margin-bottom: 0.5rem;
     font-weight: 500;
     line-height: 1.2;
@@ -321,7 +355,7 @@ iframe {
 
 .display-4 {
     font-size: calc(1.475rem + 2.7vw);
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.2;
 }
 
@@ -694,3 +728,61 @@ body {
 .text-center {
     text-align: center !important;
 }
+
+.text-left {
+    text-align: left !important;
+}
+
+.youtube-video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .youtube-video-container::after {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+  }
+  
+  .youtube-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .google-map-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .google-map-container::after {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+  }
+  
+  .google-map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .chart-container {
+    /* position: relative; */
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(227, 236, 234, 0.7);
+  }
+  
+  
+
+  

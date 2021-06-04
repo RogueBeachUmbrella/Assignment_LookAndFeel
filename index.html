@@ -1,34 +1,167 @@
-<html>
-<header>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page - GoNice</title>
+    <link rel="stylesheet" href="./css/go-nice.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/travel.css">
-    <title>Group #3 Travel Destinations</title>
+    <!-- <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" /> -->
+</head>
 
-</header>
 <body>
-    <div id="usf" class="top left"></div>
-    <div id="container">
-        <div class="topnav">
-            <a class="active" href="./index.html">&#8984</a>
-            <a href="./armando.html">Armando</a>
-            <a href="./carla.html">Carla</a>
-            <a href="./jessica.html">Jessica</a>
-            <a href="./vibha.html">Vibha</a>
-        </div>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">GoNice</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="where-to-stay.html">Where to Stay</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="where-to-eat.html">Where to Eat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="what-to-do.html">What to do</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+
+            <div class="text-center">
+                <h1 class="display-4">Welcome</h1>
+                <p>Learn more about this beautiful city of France <a href="https://en.wikipedia.org/wiki/Nice">Nice❤</a>.</p>
+            </div>
+
+            <!-- <div class="text-center"> -->
+            <div class="youtube-video-container">
+                <iframe width="600"
+                        height="450"
+                        src="https://www.youtube.com/embed/I60A8-iORm8"
+                        frameborder="0"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <!-- </div> -->
+
+                <div class="text-left">
+                    <h2>A little history...</h2>
+                    <p>Nice, seaport city, Mediterranean tourist centre, and capital of Alpes-Maritimes département, Provence–Alpes–Côte-d’Azur région, southeastern France. The city is located on the Baie (bay) des Anges, 20 miles (32 km) from the Italian border. Sheltered by beautiful hills, Nice has a pleasant climate and is the leading resort city of the Côte d’Azur, or French Riviera.</p>
+                    <p>Founded by the Phocaeans of Marseille (a colony of Greek mariners) around 350 BCE, the city was probably named in honour of a victory (nikē in Greek) over a neighbouring colony. Conquered by the Romans during the 1st century CE, it became a busy trading station. The town was held by the counts of Provence during the 10th century, and in 1388 passed under the protection of the counts of Savoy, who held it until 1860, although it was captured and occupied several times by the French during the 17th and 18th centuries. Nice was ceded to France by the Treaty of Turin (1860), after which a referendum ratified the decision.</p>
+                </div>
 
 
+                <div class="text-left">
+                    <h2>Average weather</h2>
+                    <p>In Nice, the summers are short, warm, humid, dry, and mostly clear and the winters are long, cold, and partly cloudy. Over the course of the year, the temperature typically varies from 41°F to 82°F and is rarely below 35°F or above 86°F.</p>
+                    <p>The warm season lasts for 2.8 months, from June 21 to September 14, with an average daily high temperature above 76°F. The hottest day of the year is August 8, with an average high of 82°F and low of 70°F.</p>
+                    <p>The cool season lasts for 4.1 months, from November 22 to March 26, with an average daily high temperature below 60°F. The coldest day of the year is January 12, with an average low of 41°F and high of 54°F.</p>
 
 
+                    <div class="chart-container">
+                        <p>
+                            <canvas id="temperature-chart"></canvas>
+                            <script>
+                                new Chart(document.getElementById("temperature-chart"), {
+                                type: 'line',
+                                data: {
+                                    labels: ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"],
+                                    datasets: [{
+                                        data: [46, 45, 48, 52, 58, 65, 70, 70, 66, 60, 53, 48],
+                                        label: "Lows",
+                                        borderColor: "#333",
+                                        borderWidth: 1,
+                                        backgroundColor: "#84E7F1",
+                                        fill: true
+                                    }, {
+                                        data: [54, 54, 58, 61, 68, 74, 80, 80, 75, 68, 61, 56],
+                                        label: "Highs",
+                                        borderColor: "#333",
+                                        borderWidth: 1,
+                                        backgroundColor: "#F18E84",
+                                        fill: true
+                                    }
+                                    ]
+                                },
+                                options: {
+                                    title: {
+                                    display: false,
+                                    text: 'Monthly Average Temperature in the French Riviera (Côte d\'Azur)'
+                                    }
+                                }
+                                });
+                            </script>
+                        </p>
+                    </div>
 
-        <h1>Group Three Travel Destinations</h1>
+                </div>
 
-        <div class="box-content-right">
-            <h3>Tampa, Florida</h3>
-            <p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar.</p>
-            <p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..</p>
-        </div>
 
+                <div class="text-left">
+                    <h2>How to get to Nice</h2>
+                    <p>The wholesome geographical location of Nice turns the city into a destination accessible by air, by land and by sea alike. The closest airport is Nice Cote d’Azur Airport, whereas Port de Nice is the place where ships which crisscross the Mediterranean Sea can haul ashore.</p>
+                    <p>Nice also has fine railway connections with cities like Paris, Lyon or Cannes. The so-called La Provencale (A8) is the largest motorway which passes just several kilometers north from Nice, allowing tourists to get here from virtually the entire mainland Europe. Several national and international bus companies offer regular trips to and from Nice, linking the French Riviera to the rest of the country and even to other major European destinations.</p>
+
+
+                        <div class="google-map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10074697.441658786!2d7.9965332398429805!3d43.729473109231705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd0106a852d31%3A0x40819a5fd979a70!2sNice%2C%20France!5e0!3m2!1sen!2sus!4v1622765846709!5m2!1sen!2sus"
+                                    width="600"
+                                    height="450"
+                                    style="border:0;"
+                                    allowfullscreen=""
+                                    loading="lazy">
+                            </iframe>
+                        </div>
+
+
+                    <h3>By Air</h3>
+                    <p>Nice Cote d’Azur Airport is located some 3 kilometers southwest of Nice, and it actually services the tourist platform of the entire French Riviera, Monaco included. It is rated the third busiest airport in France, only after the two airports which enable the passage of the tourist flow to Paris, a feature explainable by the tremendous popularity the French Cote d’Azur enjoys worldwide.
+                    <p>The airport transfer means to Nice are fairly reliable, so, in all likelihood, traveling by air is the most straightforward manner of getting to Nice.</p>
+
+                    <h3>By Train</h3>
+                    <p>It is precisely this railway terminal that provides the best train connections with other major French cities, such as Paris, Bordeaux or Cannes. Gare de Nice Ville is also a terminal for trains which establish connections between Nice and sundry international destinations (roughly speaking, big European cities).</p>
+                    <p>Gare de Nice Ville is fitted for accommodating the passage of TGVs (high speed trains), though the venue keeps a striking historical atmosphere exuded by certain architectural features (mainly, decorations). A tourist information office is located just outside the train station. On top of that, bus no. 99 links the train station to the airport.</p>
+                    <p>In order to learn more about the trains which link Nice to the rest of France and Europe, please visit <a href="https://www.sncf.com/fr">www.sncf.com/fr</a></p>
+
+                    <h3>By Bus</h3>
+                    <p>There are several companies which provide bus connections between Nice and various French cities, as well as with international destinations. However we recommend our guests to use <a href="https://www.santa-azur.com/fr">Phoceens Santa Azure</a> on your next visit.<p></p>
+                    </ul>
+
+                    <h3>By Car</h3>
+                    <p><i>La Provencale</i> (the A8 motorway) is the most important thoroughfare passing just nearby Nice, linked to Nice by 5 exits which lead to various areas of the city.</p>
+                    <p>In order to learn more about the road traffic rules in France, as well as for the complete map of the network of motorways, national and regional roads in France, visit <a href="https://www.autoroutes.fr/">Autoroutes</a>.</p>
+
+                    <h3>By Boat</h3>
+                    <p>Port de Nice is one of the most developed and busiest ports on the French Riviera, being used both to commercial and tourist purposes. It is, so to say, a harbor and a marina at the same time, featuring plenty of leisure opportunities for people who come to Nice either to explore the city in depth or just to search out the shores of the Mediterranean Sea.</p>
+                    <p><a href="https://www.sncm.fr/">SNCM</a> is one of the ferry companies which link Nice to other destinations on the Mediterranean Sea, focusing on the connections between Corsica, on the one hand, and European and African ports, on the other hand.</p>
+                </div>
+
+</main>
     </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - GoNice - <a href="where-to-stay.html">Where To Stay</a>
+        </div>
+    </footer>
+    <!-- <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script> -->
+
 </body>
+
 </html>

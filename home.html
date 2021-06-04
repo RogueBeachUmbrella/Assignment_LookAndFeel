@@ -4,6 +4,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./css/travel.css">
     <title>Group #3 Travel Destinations</title>
+    
 
 </header>
 <body>
@@ -21,13 +22,51 @@
 
 
 
-        <h1>Group Three Travel Destinations</h1>
+        <h1>Welcome to the French Riviera</h1>
+
+        <h2>Weather</h2>
+
+
 
         <div class="box-content-right">
             <h3>Tampa, Florida</h3>
             <p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies ligula sed magna dictum porta. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar.</p>
             <p>Sed ut perspiciaatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..</p>
         </div>
+
+        <!-- Weather -->
+
+            <p>
+            <canvas id="temperature-chart"></canvas>
+            <script>
+                    new Chart(document.getElementById("temperature-chart"), {
+                    type: 'line',
+                    data: {
+                        labels: ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"],
+                        datasets: [{ 
+                            data: [37,38,43,48,56,62,67,66,60,54,45,39],
+                            label: "Lows",
+                            borderColor: "#3e95cd",
+                            fill: false
+                        }, { 
+                            data: [53,54,60,65,73,81,86,85,78,70,59,53],
+                            label: "Highs",
+                            borderColor: "#c45850",
+                            fill: false
+                        }
+                        ]
+                    },
+                    options: {
+                        title: {
+                        display: false,
+                        text: 'Monthly Average Temperature in the French Riviera (Côte d\'Azur)'
+                        }
+                    }
+                    });
+            </script>
+            </p>
+
+    </div>
 
     </div>
 </body>
