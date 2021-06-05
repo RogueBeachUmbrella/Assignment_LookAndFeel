@@ -783,6 +783,13 @@ body {
     background-color: rgba(227, 236, 234, 0.7);
   }
   
-  
+  .image{
+      text-align: center;
+  }
+
+  .image img{
+      width: 50%;
+      height: 50%
+  }
 
   
