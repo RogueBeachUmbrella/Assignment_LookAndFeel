@@ -5,12 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Project - Visit Nice, France</title>
-    <link rel="stylesheet" href="./css/go-nice.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 </head>
 
 <body>
-    <header>
+    <header id="sticky-header">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" href="index.html">Home</a>
@@ -26,7 +26,7 @@
                             <a class="nav-link text-dark" href="what-to-do.html">What to do</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="wine-lover-escapes.html">Wine Country</a>
+                            <a class="nav-link text-dark" href="wine-country.html">Wine Country</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" href="about-project.html">About project</a>
@@ -37,7 +37,7 @@
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3 container-md">
 
             <div class="text-center">
                 <h1 class="display-4">About project</h1>
@@ -53,10 +53,9 @@
             <div class="text-left">
                 <h2>Design</h2>
                 <p>
-                    For this assignment our team aimed to create an interactive travel page for Nice, France. We included links, maps, embedded images, videos, and a responsive Google Map.
-                    In addition, we created a static weather chart at our destination.
+                    For this assignment our team aimed to create an interactive travel page for Nice, France. We included links, maps, embedded images, videos, and a responsive Google Map. In addition, we created a static weather chart at our destination.
                 </p>
-                
+
             </div>
 
             <div class="text-center">
@@ -78,7 +77,16 @@
 
             <div class="text-left">
                 <h3>Jessica Greenlee</h3>
-                <p>Worked on Wine Escapes page and javascript photo animation</p>
+                <p>
+                    Worked on Wine Country page and javascript photo animation
+                </p>
+                <ul>
+                    <li>Worked on Wine Escapes page and javascript photo animation</li>
+                    <li>Cleaned up responsive functionality and styling on pages</li>
+                    <li>Consolidated styling rules in main.css</li>
+                    <li>Consolidated javascript in main.js</li>
+                </ul>
+
             </div>
 
             <div class="text-left">
@@ -112,12 +120,12 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - Visit Nice, France - <a href="index.html">Home</a>
-        </div>
-    </footer>
+
+    <script src="./js/main.js"></script>
 
 </body>
+<footer class="border-top footer text-muted">
+    &copy; 2021 - Visit Nice, France - <a href="index.html">Home</a>
+</footer>
 
 </html>

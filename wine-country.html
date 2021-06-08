@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="./css/go-nice.css">
-    <link rel="stylesheet" type="text/css" href="./css/wine-escapes.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
     <title>French Riveria - Wine Lover Escapes</title>
 </head>
 
 <body>
-    <header>
+    <header id="sticky-header">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" href="index.html">Home</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
@@ -27,7 +26,7 @@
                             <a class="nav-link text-dark" href="what-to-do.html">What to do</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="wine-lover-escapes.html">Wine Country</a>
+                            <a class="nav-link text-dark" href="wine-country.html">Wine Country</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" href="about-project.html">About project</a>
@@ -37,36 +36,33 @@
             </div>
         </nav>
     </header>
+
     <!--Container start-->
     <div class="container">
         <!--Header start-->
         <div class="c1 flex-container">
-            <header>
-                <h1>Wine Escapes</h1>
-                <aside>
-                    <p>Discover what the French Rivera has to offer</p>
-                </aside>
-            </header>
+            <h1>Wineries & Vineyards</h1>
+            <aside>
+                <p>Discover what the French Rivera has to offer</p>
+            </aside>
         </div>
         <!--Header end-->
 
         <!--Main content start-->
         <div class="c1 flex-container">
             <div>
-                <h2>
-                    Wineries & Vineyards
-                </h2>
-                <div class="vineyard-container">
+                <div class="section-container">
                     <h3>
                         Chateau de Bellet
                     </h3>
-                    <a class="vineyard-link" href="https://www.chateaudebellet.com/" target="_blank">www.chateaudebellet.com</a>
 
                     <p>
                         At an altitude of 300m on the hills of Nice, the Château de Bellet is located at the highest point of the AOP Bellet. It was in the 18th century that the Barons de Bellet began to plant their vines. This family, originally from Savoy, gave its name to
                         the appellation which celebrated its 70th anniversary in 2011. On the culminating plots of the appellation, the vines of Château de Bellet surround the old family chapel. The monument built in homage to Agnès Roissard de Bellet
                         in 1873 is one of the major imprints left by this family. Today the desecrated Chapel opens its doors to you all year round to discover our shop and tasting room where you can taste gourmet wines of character.
+                        <a class="vineyard-link" href="https://www.chateaudebellet.com/" target="_blank">www.chateaudebellet.com</a>
                     </p>
+
                     <div class="slideshow-container">
                         <div class="chateau-de-bellet flex-container">
                             <img src="./img/chateau-de-bellet/aerial-view.jpg">
@@ -89,15 +85,15 @@
 
 
                 </div>
-                <div class="vineyard-container">
+                <div class="section-container">
                     <h3>
                         Domaine de Toasc
                     </h3>
-                    <a class="vineyard-link" href="http://www.domainedetoasc.com/" target="_blank">www.domainedetoasc.com</a>
                     <p>
                         Ideally located on the heights of Nice, the vineyard of Bellet is certainly one of the oldest of France and its plantation goes back up probably to the time of the Romans. Its identity, linked to the life of the Niçoises families, is revealed by the typicality
                         of its native grape varieties and the quality of its aromas. Present on the most prestigious tables of the world, everyone can measure the considerable value of the wines of Bellet which contribute to the notoriety of Nice and
                         the Côte d'Azur.
+                        <a class="vineyard-link" href="http://www.domainedetoasc.com/" target="_blank">www.domainedetoasc.com</a>
                     </p>
 
                     <div class="slideshow-container">
@@ -119,16 +115,16 @@
                         <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
                     </div>
                 </div>
-                <div class="vineyard-container">
+                <div class="section-container">
                     <h3>
                         Chateau de Cremat
                     </h3>
-                    <a class="vineyard-link" href="https://www.chateaucremat.com/ " target="_blank">www.chateaucremat.com/</a>
                     <p>
                         Some 2000 years ago, the Romans settled down in the current location of the Château de Crémat and dug some tunnels, those still used today to mature and preserve our wines! The vineyard consists in 7 hectares spread over the hills of Crémat, Saint-Sauveur
                         and Saquier. Because of its geographical location, it enjoys an exceptional microclimate allowing for a slow maturing of the grapes: all along the year, it is swept by winds coming down from the Alps and others coming up from the
                         Baie des Anges. The elevation is also one of the characteristics of the vineyard because the plots are located between 100 and 350 meters. All the wines produced at Château de Crémat exclusively come from organic grapes, which
                         lets them reach optimum quality and preserves the environment.
+                        <a class="vineyard-link" href="https://www.chateaucremat.com/ " target="_blank">www.chateaucremat.com/</a>
                     </p>
 
                     <div class="slideshow-container">
@@ -154,12 +150,15 @@
             </div>
         </div>
         <!--Main content end-->
-        <a class="home-button" href="index.html">Home</a>
     </div>
     <!--Container end-->
 
     <!--JS link-->
-    <script src="./js/wine-escapes.js"></script>
+    <script src="./js/main.js"></script>
 </body>
+
+<footer class="border-top footer text-muted">
+    &copy; 2021 - Visit Nice, France - <a href="index.html">Home</a>
+</footer>
 
 </html>
