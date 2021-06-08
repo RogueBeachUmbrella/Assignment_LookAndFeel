@@ -11,7 +11,7 @@
 </head>
 
 <body>
-        <header>
+    <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" href="index.html">Home</a>
@@ -40,7 +40,7 @@
     <!--Container start-->
     <div class="container">
         <!--Header start-->
-        <div class="c1 flex-column">
+        <div class="c1 flex-container">
             <header>
                 <h1>Wine Escapes</h1>
                 <aside>
@@ -51,79 +51,105 @@
         <!--Header end-->
 
         <!--Main content start-->
-        <div class="c1 flex-column">
+        <div class="c1 flex-container">
             <div>
                 <h2>
                     Wineries & Vineyards
                 </h2>
-                <div>
+                <div class="vineyard-container">
                     <h3>
                         Chateau de Bellet
                     </h3>
+                    <a class="vineyard-link" href="https://www.chateaudebellet.com/" target="_blank">www.chateaudebellet.com</a>
+
                     <p>
                         At an altitude of 300m on the hills of Nice, the Château de Bellet is located at the highest point of the AOP Bellet. It was in the 18th century that the Barons de Bellet began to plant their vines. This family, originally from Savoy, gave its name to
                         the appellation which celebrated its 70th anniversary in 2011. On the culminating plots of the appellation, the vines of Château de Bellet surround the old family chapel. The monument built in homage to Agnès Roissard de Bellet
                         in 1873 is one of the major imprints left by this family. Today the desecrated Chapel opens its doors to you all year round to discover our shop and tasting room where you can taste gourmet wines of character.
                     </p>
                     <div class="slideshow-container">
-                        <div class="image-slide">
-                            <div class="numbertext">1 / 4</div>
+                        <div class="chateau-de-bellet flex-container">
                             <img src="./img/chateau-de-bellet/aerial-view.jpg">
-                            <div class="text">Caption Text</div>
                         </div>
-                        <div class="image-slide">
-                            <div class="numbertext">2 / 4</div>
+                        <div class="chateau-de-bellet flex-container">
                             <img src="./img/chateau-de-bellet/cask-logo.jpg">
-                            <div class="text">Caption Text</div>
                         </div>
-                        <div class="image-slide">
-                            <div class="numbertext">3 / 4</div>
+                        <div class="chateau-de-bellet flex-container">
                             <img src="./img/chateau-de-bellet/chess-game.jpg">
-                            <div class="text">Caption Text</div>
                         </div>
-                        <div class="image-slide">
-                            <div class="numbertext">4 / 4</div>
+                        <div class="chateau-de-bellet flex-container">
                             <img src="./img/chateau-de-bellet/red-wine.jpg">
-                            <div class="text">Caption Text</div>
                         </div>
 
                         <!-- Next and previous buttons -->
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
                     </div>
 
-                    <!-- The dots/circles -->
-                    <div style="text-align:center">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                        <span class="dot" onclick="currentSlide(4)"></span>
-                    </div>
 
-                    <a href="https://www.chateaudebellet.com/">Website</a>
+
                 </div>
-                <div>
+                <div class="vineyard-container">
                     <h3>
                         Domaine de Toasc
                     </h3>
+                    <a class="vineyard-link" href="http://www.domainedetoasc.com/" target="_blank">www.domainedetoasc.com</a>
                     <p>
                         Ideally located on the heights of Nice, the vineyard of Bellet is certainly one of the oldest of France and its plantation goes back up probably to the time of the Romans. Its identity, linked to the life of the Niçoises families, is revealed by the typicality
                         of its native grape varieties and the quality of its aromas. Present on the most prestigious tables of the world, everyone can measure the considerable value of the wines of Bellet which contribute to the notoriety of Nice and
                         the Côte d'Azur.
                     </p>
-                    <a href="http://www.domainedetoasc.com/">Website</a>
+
+                    <div class="slideshow-container">
+                        <div class="domaine-de-tosac flex-container">
+                            <img src="./img/domaine-de-tosac/domaine-de-toasc-countryside.jpg">
+                        </div>
+                        <div class="domaine-de-tosac flex-container">
+                            <img src="./img/domaine-de-tosac/domaine-de-toasc-grapes.jpg">
+                        </div>
+                        <div class="domaine-de-tosac flex-container">
+                            <img src="./img/domaine-de-tosac/domaine-de-toasc-cask.jpg">
+                        </div>
+                        <div class="domaine-de-tosac flex-container">
+                            <img src="./img/domaine-de-tosac/domaine-de-toasc-wine.jpg">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                    </div>
                 </div>
-                <div>
+                <div class="vineyard-container">
                     <h3>
                         Chateau de Cremat
                     </h3>
+                    <a class="vineyard-link" href="https://www.chateaucremat.com/ " target="_blank">www.chateaucremat.com/</a>
                     <p>
                         Some 2000 years ago, the Romans settled down in the current location of the Château de Crémat and dug some tunnels, those still used today to mature and preserve our wines! The vineyard consists in 7 hectares spread over the hills of Crémat, Saint-Sauveur
                         and Saquier. Because of its geographical location, it enjoys an exceptional microclimate allowing for a slow maturing of the grapes: all along the year, it is swept by winds coming down from the Alps and others coming up from the
                         Baie des Anges. The elevation is also one of the characteristics of the vineyard because the plots are located between 100 and 350 meters. All the wines produced at Château de Crémat exclusively come from organic grapes, which
                         lets them reach optimum quality and preserves the environment.
                     </p>
-                    <a href="https://chateaucremat.com/">Website</a>
+
+                    <div class="slideshow-container">
+                        <div class="chateau-de-cremat flex-container">
+                            <img src="./img/chateau-de-cremat/chateau-de-cremat-nice-cour.jpg">
+                        </div>
+                        <div class="chateau-de-cremat flex-container">
+                            <img src="./img/chateau-de-cremat/chateau-de-cremat-view.jpg">
+                        </div>
+                        <div class="chateau-de-cremat flex-container">
+                            <img src="./img/chateau-de-cremat/chateau-de-cremat-caves.jpg">
+                        </div>
+                        <div class="chateau-de-cremat flex-container">
+                            <img src="./img/chateau-de-cremat/chateau-de-cremat-wine.jpg">
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+                    </div>
+
                 </div>
             </div>
         </div>
